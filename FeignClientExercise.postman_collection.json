@@ -1,0 +1,70 @@
+{
+	"info": {
+		"_postman_id": "1abf5175-8197-4ee9-88cd-ebfb2eadf9af",
+		"name": "FeignClientExercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30775488"
+	},
+	"item": [
+		{
+			"name": "getProductById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"iPhone\", \"price\": 999.99 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/products/654ee0a1325938574c9352a2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"products",
+						"654ee0a1325938574c9352a2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAnOrder",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"productId\": \"654ee0a1325938574c9352a2\", \"quantity\": 1 }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
