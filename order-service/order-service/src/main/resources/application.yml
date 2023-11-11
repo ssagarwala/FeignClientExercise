@@ -1,0 +1,17 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: order-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: order-service
+  profiles:
+    active: local
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 30000
+        readTimeout: 30000
